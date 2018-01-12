@@ -31,7 +31,7 @@ app.post('/login', (req, res) => {
 });
 app.post('/register', (req, res) => {
     let obj = req.body;
-    helper.register(obj.email, obj.password, (err, result) => {
+    helper.register(obj.email, obj.password,obj.name, (err, result) => {
         console.log(result)
         if (result && result.recordset[0].ID) {
             res.send({

@@ -15,11 +15,12 @@ function login(email, password, callback) {
         console.log("login", err)
     });
 };
-function register(email,password,callback) {
+function register(email,password,name,callback) {
     new sql.ConnectionPool(config).connect().then(pool => {
         return pool.request()
             .input('email', sql.NVarChar, email)
             .input('password', sql.NVarChar, utils.getMD5FromString(password))
+            .input('name', sql.NVarChar, name)
             .execute('usp_HaoHt_User_Register')
     }).then(result => {
         callback(null, result);
