@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {
@@ -10,19 +10,29 @@ import Home from './pages/HomePage'
 import About from './pages/About'
 import Login from "./pages/LoginPage";
 import Register from "./pages/Register";
+import {connect} from 'react-redux'
 
 class App extends Component {
-  render() {
-    return (
-        <Router>
-            <div>
-                <Route exact path="/" component={Login}/>
-                <Route path="/about" component={About}/>
-                <Route path="/register" component={Register}/>
-            </div>
-        </Router>
-    );
-  }
+    constructor(props) {
+        super(...props);
+        this.state = {
+
+        }
+    }
+
+    render() {
+        return (
+            <Router>
+                <div>
+                    <Route exact path="/" component={this.props.isLogin ? Home : Login}/>
+                    <Route path="/about" component={About}/>
+                    <Route path="/register" component={Register}/>
+                </div>
+            </Router>
+        );
+    }
 }
 
-export default App;
+export default connect((state) => {
+    return {isLogin:state.isLogin}
+})(App);
