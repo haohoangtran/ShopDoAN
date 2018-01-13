@@ -1,4 +1,4 @@
-const md5 = require('js-md5');
+var md5 = require('md5');
 
 function getMD5FromString(input) {
     return md5(input)

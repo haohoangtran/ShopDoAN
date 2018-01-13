@@ -1,5 +1,6 @@
 let app = require('express')();
 const helper = require('./helper')
+const mail = require('./mail')
 let server = require('http').Server(app);
 let io = require('socket.io')(server);
 server.listen(6969);
@@ -31,18 +32,37 @@ app.post('/login', (req, res) => {
 });
 app.post('/register', (req, res) => {
     let obj = req.body;
-    helper.register(obj.email, obj.password,obj.name, (err, result) => {
-        console.log(result)
-        if (result && result.recordset[0].ID) {
-            res.send({
-                status:true,
-                id:result.recordset[0].ID
-            })
+    console.log(obj)
+    helper.register(obj.email, obj.password, obj.name, (err, result) => {
+        let respon = {}
+        if (result&&result.ID) {
+            mail.sendMailRegister(result.Name, result.Code, result.ID, obj.email);
+            respon={
+                status: true,
+                id: result.ID
+            }
         } else {
-            res.send({
-                status:false,
-                id:null
-            })
+            respon={
+                status: false,
+                id: null
+            }
         }
+        res.send(
+            respon
+        )
     })
+});
+app.get('/verify', (req, res) => {
+    let id = req.query.id
+    let code = req.query.code;
+    helper.verifyUser(id, code, (err, result) => {
+        if (result && result.recordset[0].value) {
+            res.redirect('http://localhost:3000')
+        } else {
+            res.send('Url khong kha dung')
+        }
+    });
+});
+app.get('/', (req, res) => {
+   res.send('hi')
 });
