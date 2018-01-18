@@ -1,7 +1,8 @@
 import ACTION_TYPE from './ActionType'
 let defaultState={
     isLogin:false,
-    cart:[]
+    cart:[],
+    activePage: 'home'
 };
 export default function (state=defaultState, action) {
     switch (action.type){
@@ -12,7 +13,10 @@ export default function (state=defaultState, action) {
             return state
         }
         case ACTION_TYPE.CHANGE_IS_LOGIN:{
-            return {...state,isLogin:!state.isLogin,cart:[1]}
+            return {...state,isLogin:action.value}
+        }
+        case ACTION_TYPE.CHANGE_PAGE:{
+            return {...state,activePage:action.page}
         }
         default:
             return state

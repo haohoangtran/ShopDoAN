@@ -1,5 +1,7 @@
 {
-  "BASE_URL":"http://localhost:6969"
+  "BASE_URL":"http://localhost:6969",
+  "User":"user",
+  "Cart":"cart"
 }
 
 

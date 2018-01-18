@@ -1,0 +1,187 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    width: 100%;
+    height: 100%;
+    overflow:scroll;
+}
+.topMenu {
+    height: 10px;
+}
+
+label {
+    cursor: pointer;
+}
+
+label:focus {
+    outline: none;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    width: 240px;
+    height: 100%;
+    transform: translate3d(-240px, 0, 0);
+    transition: transform 0.35s;
+}
+
+.menu label.menu-toggle {
+    position: absolute;
+    right: -60px;
+    width: 60px;
+    height: 60px;
+    line-height: 0px;
+    display: block;
+    padding: 0;
+    text-indent: -9999px;
+    background: #fff url(https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png) 50% 50%/25px 25px no-repeat;
+}
+
+.menu ul li > label {
+    background: url(https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-arrow-right-b-128.png) 95% 50%/16px 16px no-repeat;
+}
+
+.menu ul li a, .menu ul li label {
+    display: block;
+    text-align: center;
+    padding: 0 20px;
+    line-height: 60px;
+    text-decoration: none;
+    color: #000;
+}
+
+.menu ul li a:hover, .menu ul li label:hover {
+    color: #666;
+}
+
+/* hide inputs */
+.menu-checkbox {
+    display: none;
+}
+
+/* hide navigation icon for sublabels */
+.menu .menu label.menu-toggle {
+    background: none;
+}
+
+/* fade in checked menu */
+.menu-checkbox:checked + .menu {
+    transform: translate3d(0, 0, 0);
+}
+
+/* for show */
+html, body {
+    height: 100%;
+}
+
+
+
+p {
+    margin-bottom: 15px;
+}
+
+#info {
+    display: table;
+    background: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 100%;
+}
+#center {
+    position: relative;
+    width: auto;
+    height: auto;
+    z-index: 15;
+    top: 5%;
+    left: 50%;
+
+
+}
+.child {
+    display: inline-block;
+    background:blue;
+    margin:10px 0 0 2%;
+    flex-grow: 1;
+    height:100px;
+    width: calc(100% * (1/4) - 10px - 1px);
+}
+body{
+    min-width:550px;
+}
+
+#info #info-content {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 12px;
+}
+
+#info #info-content h1 {
+    color: #fff;
+    border: 3px solid #fff;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.1);
+    font-size: 22px;
+    font-weight: normal;
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+}
+
+#info #info-content h1 strong {
+    display: block;
+    font-size: 26px;
+}
+
+img.bg {
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1024px;
+
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+div.admin-bg {
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1024px;
+
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+@media screen and (max-width: 1024px) {
+    /* Specific to this particular image */
+    img.bg {
+        left: 50%;
+        margin-left: -512px; /* 50% */
+    }
+
+    div.admin-bg {
+        left: 50%;
+        margin-left: -512px; /* 50% */
+    }
+}

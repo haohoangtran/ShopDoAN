@@ -10,8 +10,7 @@ import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import ActionType from "../../redux/ActionType";
-import store from "../../redux/Store";
+
 
 import {withRouter} from "react-router-dom";
 const CONFIG = require('../../config')
@@ -25,8 +24,14 @@ export default class Register extends Component {
             email: "",
             msg: "",
             open: false,
-            isRegiter: false
+            isRegiter: false,
+
         };
+    }
+    componentWillMout(){
+        if(!localStorage.getItem('user')){
+
+        }
     }
 
     componentDidMount() {
@@ -80,7 +85,7 @@ export default class Register extends Component {
     render() {
         const actions = [
             <FlatButton
-                label="Cancel"
+                label="OK"
                 primary={true}
                 onClick={() => {
                     this.setState({open: false});

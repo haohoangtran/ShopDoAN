@@ -17,7 +17,7 @@ function login(email, password, callback) {
 };
 
 function register(email, password, name, callback) {
-   const pool= new sql.ConnectionPool(config, err => {
+    const pool = new sql.ConnectionPool(config, err => {
         // ... error checks
 
         // Stored Procedure
@@ -27,7 +27,7 @@ function register(email, password, name, callback) {
             .input('password', sql.NVarChar, utils.getMD5FromString(password))
             .input('name', sql.NVarChar, name)
             .execute('usp_HaoHt_User_Register', (err, result) => {
-                callback(err,result.recordset[0])
+                callback(err, result.recordset[0])
                 console.dir(result)
             })
     });
@@ -36,7 +36,8 @@ function register(email, password, name, callback) {
         console.log(err)
     });
 }
-function verifyUser(id,code,callback) {
+
+function verifyUser(id, code, callback) {
     new sql.ConnectionPool(config).connect().then(pool => {
         return pool.request()
             .input('id', sql.Int, id)
@@ -50,8 +51,33 @@ function verifyUser(id,code,callback) {
     });
 
 }
+function getAllFood(callback) {
+    new sql.ConnectionPool(config).connect().then(pool => {
+        return pool.request()
+            .execute('usp_HaoHt_Food_selectAll')
+    }).then(result => {
+        callback(null, result);
+    }).catch(err => {
+        callback(err, null);
+        console.log("getAllFood", err)
+    });
+}
+function getUserFromId(id,callback) {
+
+    new sql.ConnectionPool(config).connect().then(pool => {
+        return pool.request()
+            .input('id', sql.Int, id)
+            .execute('selectUserFromId')
+    }).then(result => {
+        callback(null, result);
+    }).catch(err => {
+        callback(err, null);
+        console.log("getAllFood", err)
+    });
+}
+
 
 module.exports = {
-    login, register,verifyUser
+    login, register, verifyUser,getAllFood,getUserFromId
 }
 

@@ -17,7 +17,9 @@ app.post('/login', (req, res) => {
         if (result && result.recordset[0]) {
             respon = {
                 status: true,
-                IdUser: result.recordset[0].id
+                IdUser: result.recordset[0].id,
+                isActive:result.recordset[0].isActive,
+                user:result.recordset[0]
             }
         } else {
             respon = {
@@ -64,5 +66,16 @@ app.get('/verify', (req, res) => {
     });
 });
 app.get('/', (req, res) => {
-   res.send('hi')
+    res.send('hi')
+});
+app.get('/food', (req, res) => {
+    helper.getAllFood((err,result)=>{
+        res.send(result.recordset)
+    })
+});
+app.get('/user/:id', (req, res) => {
+    let id =req.params.id;
+    helper.getUserFromId(id,(err,result)=>{
+        res.send(result.recordset[0]||{})
+    })
 });

@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import './main.css';
 import './util.css';
-import {withRouter} from 'react-router-dom'
 import {connect} from 'react-redux'
 import ActionType from "../../redux/ActionType";
 import store from '../../redux/Store';
+import Dialog from 'material-ui/Dialog';
+import FlatButton from 'material-ui/FlatButton';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 const CONFIG = require('../../config')
 
@@ -15,11 +17,18 @@ class Login extends Component {
             email: '',
             password: '',
             wrongEmail: false,
-            isEmail: false
+            isEmail: false,
+            open: false,
+            msg: ""
         }
+
     }
+
     componentDidMount() {
+
         document.title = "Login to ...";
+        let user=localStorage.getItem(CONFIG.User)
+
     }
 
     validateEmail(email) {
@@ -42,8 +51,12 @@ class Login extends Component {
             .then((response) => response.json())
             .then((responseJson) => {
                 console.log(responseJson)
-                if (responseJson.status) {
-                    store.dispatch({type: ActionType.CHANGE_IS_LOGIN})
+                if (responseJson.status && responseJson.isActive) {
+                    store.dispatch({type: ActionType.CHANGE_IS_LOGIN, value: true});
+                    localStorage.setItem('user',JSON.stringify(responseJson.user))
+                    this.props.history.push("/home");
+                } else if (responseJson.status && !responseJson.isActive) {
+                    this.setState({open: true, msg: 'Vui lòng kiểm tra hộp thư và xác nhận email của bạn!'})
                 } else {
                     this.setState({wrongEmail: true, password: ''})
                 }
@@ -54,6 +67,15 @@ class Login extends Component {
     };
 
     render() {
+        const actions = [
+            <FlatButton
+                label="OK"
+                primary={true}
+                onClick={() => {
+                    this.setState({open: false});
+                }}
+            />
+        ];
         return (
             <div className="limiter">
                 <img src="images/bg.jpg" id="bg" alt=""/>
@@ -80,7 +102,7 @@ class Login extends Component {
                                     <i className="zmdi zmdi-eye"/>
                                     </span>
                                 <input className="input100" type="password" value={this.state.password}
-                                        onChange={(event) => {
+                                       onChange={(event) => {
                                            this.setState({password: event.target.value, wrongEmail: false})
                                        }}/>
                                 <span className="focus-input100"
@@ -108,6 +130,16 @@ class Login extends Component {
                                     Sign Up
                                 </a>
                             </div>
+                            <MuiThemeProvider>
+                                <Dialog
+                                    title="Thông báo!"
+                                    actions={actions}
+                                    modal={true}
+                                    open={this.state.open}
+                                >
+                                    {this.state.msg}
+                                </Dialog>
+                            </MuiThemeProvider>
                         </div>
                     </div>
                 </div>

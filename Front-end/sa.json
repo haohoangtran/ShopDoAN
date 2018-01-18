@@ -1,0 +1,172 @@
+[
+  {
+    
+    "name": "Đùi gà nướng mật",
+    "url": "http://res.cloudinary.com/dumfykuvl/image/upload/v1489778129/nuongmat_xolbve.png",
+    "coint_old": "30000",
+    "coint_new": "30000",
+    "cout_rate": 11,
+    "rate": 4.318181818181818,
+    "is_favorite": true
+  },
+  {
+    
+    "name": "Cơm rang đùi cay",
+    "url": "http://res.cloudinary.com/dumfykuvl/image/upload/v1489778119/comrangduimat_dzoyrh.png",
+    "coint_old": "45000",
+    "coint_new": "43000",
+    "cout_rate": 10,
+    "rate": 4.55,
+    "is_favorite": true
+  },
+  {
+    
+    "name": "Bò xào rau cải",
+    "url": "http://res.cloudinary.com/dumfykuvl/image/upload/v1489778124/boxaocai_eoveo4.png",
+    "coint_old": "50000",
+    "coint_new": "47000",
+    "cout_rate": 4,
+    "rate": 4.125,
+    "is_favorite": false
+  },
+  {
+    
+    "name": "Mỳ xào bò",
+    "url": "http://res.cloudinary.com/dumfykuvl/image/upload/v1489778124/myxaobo_q1hwk3.png",
+    "coint_old": "45000",
+    "coint_new": "43000",
+    "cout_rate": 4,
+    "rate": 4,
+    "is_favorite": true
+  },
+  {
+   
+    "name": "Cơm rang dưa bò",
+    "url": "http://res.cloudinary.com/dumfykuvl/image/upload/v1489778120/comrangduabo_gmmpdg.png",
+    "coint_old": "45000",
+    "coint_new": "43000",
+    "cout_rate": 1,
+    "rate": 2,
+    "is_favorite": true
+  },
+  {
+   
+    "name": "Đùi gà sốt cay",
+    "url": "http://res.cloudinary.com/dumfykuvl/image/upload/v1489778124/sotcay_ffmzuv.png",
+    "coint_old": "30000",
+    "coint_new": "30000",
+    "cout_rate": 2,
+    "rate": 2.75,
+    "is_favorite": true
+  },
+  {
+    
+    "name": "Cơm rang thập cẩm",
+    "url": "http://res.cloudinary.com/dumfykuvl/image/upload/v1489898512/comrangthapcam_c07cmt.jpg",
+    "coint_old": "45000",
+    "coint_new": "43000",
+    "cout_rate": 2,
+    "rate": 3,
+    "is_favorite": false
+  },
+  {
+   
+    "name": "Cơm rang bò xào dứa",
+    "url": "http://res.cloudinary.com/dumfykuvl/image/upload/v1489898513/comrangboxaodua_gnlibh.jpg",
+    "coint_old": "45000",
+    "coint_new": "43000",
+    "cout_rate": 0,
+    "rate": 5,
+    "is_favorite": false
+  },
+  {
+    
+    "name": "Dứa ướp cay ngọt",
+    "url": "http://res.cloudinary.com/dumfykuvl/image/upload/v1489898512/duauopcayngot_zbuauh.jpg",
+    "coint_old": "25000",
+    "coint_new": "25000",
+    "cout_rate": 0,
+    "rate": 5,
+    "is_favorite": false
+  },
+  {
+   
+    "name": "Dưa chuột chẻ",
+    "url": "http://res.cloudinary.com/dumfykuvl/image/upload/v1489898513/duachuotche_qmprto.jpg",
+    "coint_old": "20000",
+    "coint_new": "20000",
+    "cout_rate": 0,
+    "rate": 5,
+    "is_favorite": false
+  },
+  {
+    
+    "name": "Khoai lang chiên",
+    "url": "http://res.cloudinary.com/dumfykuvl/image/upload/v1489898513/khoailangchien_ucsjra.jpg",
+    "coint_old": "30000",
+    "coint_new": "27000",
+    "cout_rate": 1,
+    "rate": 5,
+    "is_favorite": false
+  },
+  {
+    
+    "name": "Khoai tây chiên",
+    "url": "http://res.cloudinary.com/dumfykuvl/image/upload/v1489898513/khoai-tay-chien-1_jzp9i4.jpg",
+    "coint_old": "30000",
+    "coint_new": "27000",
+    "cout_rate": 3,
+    "rate": 3.3333333333333335,
+    "is_favorite": false
+  },
+  {
+   
+    "name": "Xoài ướp cay ngọt",
+    "url": "http://res.cloudinary.com/dumfykuvl/image/upload/v1489898513/xoaiuopcayngot_j0juxs.jpg",
+    "coint_old": "25000",
+    "coint_new": "25000",
+    "cout_rate": 0,
+    "rate": 5,
+    "is_favorite": false
+  },
+  {
+    
+    "name": "Xúc xích rán",
+    "url": "http://res.cloudinary.com/dumfykuvl/image/upload/v1489898514/xucxichran_v4qeps.jpg",
+    "coint_old": "15000",
+    "coint_new": "15000",
+    "cout_rate": 1,
+    "rate": 0,
+    "is_favorite": true
+  },
+  {
+   
+    "name": "Nem chua rán",
+    "url": "http://res.cloudinary.com/dumfykuvl/image/upload/v1489898515/nen_chua_ran_10_yb3hmj.jpg",
+    "coint_old": "7000",
+    "coint_new": "7000",
+    "cout_rate": 2,
+    "rate": 5,
+    "is_favorite": false
+  },
+  {
+    
+    "name": "Cơm rang đùi gà nướng mật",
+    "url": "http://res.cloudinary.com/dumfykuvl/image/upload/v1489778118/comrangdui_t9mnqi.png",
+    "coint_old": "45000",
+    "coint_new": "43000",
+    "cout_rate": 5,
+    "rate": 2.2,
+    "is_favorite": true
+  },
+  {
+    
+    "name": "Chân gà ngâm xả ớt",
+    "url": "http://res.cloudinary.com/dumfykuvl/image/upload/v1489898512/chan-ga-ngam-sa-ot_e1jfi3.jpg",
+    "coint_old": "60000",
+    "coint_new": "56000",
+    "cout_rate": 6,
+    "rate": 2.5833333333333335,
+    "is_favorite": true
+  }
+]
