@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9a92ae9-4c5c-4a1b-8d66-293122e453d8" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/pages/DetailFood/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/pages/OrderStatus/index.js" />
       <change beforePath="$PROJECT_DIR$/../Backend/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Backend/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../Backend/helper.js" afterPath="$PROJECT_DIR$/../Backend/helper.js" />
-      <change beforePath="$PROJECT_DIR$/../Backend/index.js" afterPath="$PROJECT_DIR$/../Backend/index.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart/index.js" afterPath="$PROJECT_DIR$/src/pages/Cart/index.js" />
-      <change beforePath="$PROJECT_DIR$/src/pages/LoginPage/index.js" afterPath="$PROJECT_DIR$/src/pages/LoginPage/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/src/pages/Cart/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="290">
-              <caret line="116" column="72" lean-forward="false" selection-start-line="116" selection-start-column="38" selection-end-line="116" selection-end-column="72" />
+              <caret line="117" column="72" lean-forward="false" selection-start-line="117" selection-start-column="38" selection-end-line="117" selection-end-column="72" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -61,8 +54,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/OrderStatus/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="50" column="43" lean-forward="false" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
+            <state relative-caret-position="364">
+              <caret line="55" column="25" lean-forward="false" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -170,8 +163,8 @@
         <option value="$PROJECT_DIR$/src/pages/LoginPage/index.js" />
         <option value="$PROJECT_DIR$/src/pages/Cart/index.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/pages/OrderStatus/index.js" />
         <option value="$PROJECT_DIR$/src/pages/DetailFood/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/OrderStatus/index.js" />
       </list>
     </option>
   </component>
@@ -321,7 +314,7 @@
       <workItem from="1516182747648" duration="5708000" />
       <workItem from="1516232968533" duration="7341000" />
       <workItem from="1516253951217" duration="19725000" />
-      <workItem from="1516326562750" duration="8743000" />
+      <workItem from="1516326562750" duration="9880000" />
     </task>
     <task id="LOCAL-00001" summary="add mssql">
       <created>1515764998132</created>
@@ -344,15 +337,21 @@
       <option name="project" value="LOCAL" />
       <updated>1516299894379</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="complete order">
+      <created>1516337401924</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1516337401924</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92142000" />
+    <option name="totallyTimeSpent" value="93279000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26070863" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -387,7 +386,9 @@
     <MESSAGE value="add mssql" />
     <MESSAGE value="complete login" />
     <MESSAGE value="save work" />
-    <option name="LAST_COMMIT_MESSAGE" value="save work" />
+    <MESSAGE value="complete order" />
+    <option name="LAST_COMMIT_MESSAGE" value="complete order" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -673,7 +674,7 @@
     <entry file="file://$PROJECT_DIR$/src/pages/Cart/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
-          <caret line="116" column="72" lean-forward="false" selection-start-line="116" selection-start-column="38" selection-end-line="116" selection-end-column="72" />
+          <caret line="117" column="72" lean-forward="false" selection-start-line="117" selection-start-column="38" selection-end-line="117" selection-end-column="72" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -690,8 +691,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/OrderStatus/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="50" column="43" lean-forward="false" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
+        <state relative-caret-position="364">
+          <caret line="55" column="25" lean-forward="false" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
