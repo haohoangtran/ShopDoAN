@@ -75,9 +75,38 @@ function getUserFromId(id,callback) {
         console.log("getAllFood", err)
     });
 }
+function insertOrder(inputStr,iduser,address,phonenumber,callback) {
+
+    new sql.ConnectionPool(config).connect().then(pool => {
+        return pool.request()
+            .input('inputStr', sql.VarChar, inputStr)
+            .input('idUser', sql.Int, iduser)
+            .input('address', sql.NVarChar, address)
+            .input('phoneNumber', sql.VarChar, phonenumber)
+            .execute('usp_HaoHt_insertOrder')
+    }).then(result => {
+        callback(null, result);
+    }).catch(err => {
+        callback(err, null);
+        console.log("insertOrder", err)
+    });
+}
+function getAllOrder(iduser,callback) {
+
+    new sql.ConnectionPool(config).connect().then(pool => {
+        return pool.request()
+            .input('idUser', sql.Int, iduser)
+            .execute('usp_HaoHt_getAllOrder')
+    }).then(result => {
+        callback(null, result);
+    }).catch(err => {
+        callback(err, null);
+        console.log("insertOrder", err)
+    });
+}
 
 
 module.exports = {
-    login, register, verifyUser,getAllFood,getUserFromId
+    login, register, verifyUser,getAllFood,getUserFromId,insertOrder,getAllOrder
 }
 

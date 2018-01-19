@@ -10,9 +10,11 @@ import About from './pages/About'
 import Login from "./pages/LoginPage";
 import Register from "./pages/Register";
 import Cart from "./pages/Cart";
+import OrderStatus from "./pages/OrderStatus";
 import {connect} from 'react-redux'
 import store from './redux/Store'
 import ACTIONTYPE from './redux/ActionType'
+import {Menu} from "semantic-ui-react";
 
 
 class App extends Component {
@@ -30,24 +32,32 @@ class App extends Component {
     }
 
     render() {
+        const items = [
+            {key: 'editorials', active: true, name: 'Editorials'},
+            {key: 'review', name: 'Reviews'},
+            {key: 'events', name: 'Upcoming Events'},
+        ]
         return (
             <Router>
                 <div>
                     {(() => {
                         if (this.props.isLogin || this.state.user) {
                             return (
-                                <ul className="nav nav-pills" style={{width: '100%', height: '100px'}}>
+                                <ul className="nav nav-pills" style={{width: '100%', height: '50px'}}>
                                     <li role="presentation">
-                                        <a href={"/home"}>Home</a>
+                                        <a href={"/home"}>Trang chính</a>
                                     </li>
                                     <li role="presentation">
-                                        <a href={"/about"}>About</a>
+                                        <a href={"/orderStatus"}>Trạng thái đơn hàng</a>
                                     </li>
                                     <li role="presentation">
-                                        <a href={"/cart"}>Cart</a>
+                                        <a href={"/cart"}>Giỏ hàng</a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href={"/about"}>Về chúng tôi</a>
                                     </li>
                                     <li>
-                                    <a onClick={this.logout}>logout</a>
+                                        <a onClick={this.logout}>Đăng xuất</a>
                                     </li>
                                 </ul>
                             )
@@ -58,6 +68,7 @@ class App extends Component {
                         <Route exact path="/home" component={Home}/>
                         <Route exact path="/about" component={About}/>
                         <Route exact path="/cart" component={Cart}/>
+                        <Route exact path="/orderStatus" component={OrderStatus}/>
                     </div>
                 </div>
             </Router>

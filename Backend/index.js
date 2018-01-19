@@ -75,7 +75,32 @@ app.get('/food', (req, res) => {
 });
 app.get('/user/:id', (req, res) => {
     let id =req.params.id;
+    console.log(id)
     helper.getUserFromId(id,(err,result)=>{
         res.send(result.recordset[0]||{})
+    });
+});
+app.post('/order',(req,res)=>{
+    let obj=req.body;
+    helper.insertOrder(obj.inputStr,obj.idUser,obj.address,obj.phoneNumber,(err,result)=>{
+        if(result){
+            res.send({
+                status:true
+            })
+        }else {
+            res.send({
+                status:false
+            })
+        }
     })
 });
+app.get('/get/order/:id',(req,res)=>{
+    let id =req.params.id;
+    helper.getAllOrder(id,(err,result)=>{
+        if(result){
+            res.send(result.recordset)
+        }else {
+            res.send([])
+        }
+    })
+})

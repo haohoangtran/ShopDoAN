@@ -28,6 +28,9 @@ class Login extends Component {
 
         document.title = "Login to ...";
         let user=localStorage.getItem(CONFIG.User)
+        if (user) {
+            this.props.history.push('/')
+        }
 
     }
 
