@@ -240,14 +240,16 @@ class CartPage extends Component {
                             </Modal.Description>
                         </Modal.Content>
                         <Modal.Actions>
-                            <Button primary
+
+                            <Button basic icon={'remove'} color={'pink'} content={"Hủy"} onClick={()=>{
+                                this.setState({openModal: false})
+                            }}/>
+                            <Button inverted color={'orange'}
                                     disabled={!this.state.nameUser || !this.state.phoneNumber || !this.state.address || this.state.foodInCart.length === 0}
                                     onClick={() => {
                                         let arr = [];
                                         const idUser = JSON.parse(localStorage.getItem(CONFIG.User)).id;
-
                                         for (let food of this.state.foodInCart) {
-
                                             arr.push(
                                                 {
                                                     id: food.Id, count: food.count

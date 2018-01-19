@@ -70,6 +70,7 @@ class App extends Component {
                         <Route exact path="/about" component={About}/>
                         <Route exact path="/cart" component={Cart}/>
                         <Route exact path="/orderStatus" component={OrderStatus}/>
+                        <Route exact path="/register" component={Register}/>
                         <Route exact path="/detail/:id" component={DetailFood}/>
                     </div>
                 </div>
