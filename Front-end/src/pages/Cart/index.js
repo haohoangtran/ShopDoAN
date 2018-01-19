@@ -212,10 +212,9 @@ class CartPage extends Component {
 
                                                     this.setState({address: e.target.value})
                                                 }}/>
-                                    <Form.Input style={!this.state.phoneNumber ? {border: '1px solid red'} : {}} fluid
+                                    <Form.Input type="number" style={!this.state.phoneNumber||this.state.phoneNumber.length<10||this.state.phoneNumber.length>11 ? {border: '1px solid red'} : {}} fluid
                                                 label='Số điện thoại' placeholder='Số điện thoại'
                                                 value={this.state.phoneNumber} onChange={(e) => {
-
                                         this.setState({phoneNumber: e.target.value})
                                     }}/>
 

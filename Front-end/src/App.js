@@ -11,6 +11,7 @@ import Login from "./pages/LoginPage";
 import Register from "./pages/Register";
 import Cart from "./pages/Cart";
 import OrderStatus from "./pages/OrderStatus";
+import DetailFood from "./pages/DetailFood";
 import {connect} from 'react-redux'
 import store from './redux/Store'
 import ACTIONTYPE from './redux/ActionType'
@@ -63,12 +64,13 @@ class App extends Component {
                             )
                         }
                     })()}
-                    <div class="main">
+                    <div className="main">
                         <Route exact path="/" component={Login}/>
                         <Route exact path="/home" component={Home}/>
                         <Route exact path="/about" component={About}/>
                         <Route exact path="/cart" component={Cart}/>
                         <Route exact path="/orderStatus" component={OrderStatus}/>
+                        <Route exact path="/detail/:id" component={DetailFood}/>
                     </div>
                 </div>
             </Router>

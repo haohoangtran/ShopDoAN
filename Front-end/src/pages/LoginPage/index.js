@@ -56,7 +56,7 @@ class Login extends Component {
                 console.log(responseJson)
                 if (responseJson.status && responseJson.isActive) {
                     store.dispatch({type: ActionType.CHANGE_IS_LOGIN, value: true});
-                    localStorage.setItem('user',JSON.stringify(responseJson.user))
+                    localStorage.setItem(CONFIG.User,JSON.stringify(responseJson.user))
                     this.props.history.push("/home");
                 } else if (responseJson.status && !responseJson.isActive) {
                     this.setState({open: true, msg: 'Vui lòng kiểm tra hộp thư và xác nhận email của bạn!'})

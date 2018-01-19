@@ -104,9 +104,64 @@ function getAllOrder(iduser,callback) {
         console.log("insertOrder", err)
     });
 }
+function getFoodById(id,callback) {
+
+    new sql.ConnectionPool(config).connect().then(pool => {
+        return pool.request()
+            .input('idFood', sql.Int, id)
+            .execute('usp_Haoht_getFoodByID')
+    }).then(result => {
+        callback(null, result);
+    }).catch(err => {
+        callback(err, null);
+        console.log("insertOrder", err)
+    });
+}
+function rateFood(idUser,idFood,rate,callback) {
+
+    new sql.ConnectionPool(config).connect().then(pool => {
+        return pool.request()
+            .input('idFood', sql.Int, idFood)
+            .input('idUser', sql.Int, idUser)
+            .input('Rate', sql.Int, rate)
+            .execute('usp_HaoHt_insertUpdateRateFood')
+    }).then(result => {
+        callback(null, result);
+    }).catch(err => {
+        callback(err, null);
+        console.log("insertOrder", err)
+    });
+}
+function commentFood(idUser,idFood,content,callback) {
+
+    new sql.ConnectionPool(config).connect().then(pool => {
+        return pool.request()
+            .input('IdFood', sql.Int, idFood)
+            .input('IdUser', sql.Int, idUser)
+            .input('content', sql.NVarChar, content)
+            .execute('usp_Haoht_commentFood')
+    }).then(result => {
+        callback(null, result);
+    }).catch(err => {
+        callback(err, null);
+        console.log("insertOrder", err)
+    });
+}
+function getAllComment(idFood, callback) {
+    new sql.ConnectionPool(config).connect().then(pool => {
+        return pool.request()
+            .input('IdFood', sql.Int, idFood)
+            .execute('usp_HaoHt_getAllComment')
+    }).then(result => {
+        callback(null, result);
+    }).catch(err => {
+        callback(err, null);
+        console.log("insertOrder", err)
+    });
+}
 
 
 module.exports = {
-    login, register, verifyUser,getAllFood,getUserFromId,insertOrder,getAllOrder
+    login, register, verifyUser,getAllFood,getUserFromId,insertOrder,getAllOrder,getFoodById,rateFood,commentFood,getAllComment
 }
 

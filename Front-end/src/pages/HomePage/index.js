@@ -55,9 +55,15 @@ class HomePage extends Component {
             <div id="wrapper">
                 <Card.Group itemsPerRow={5} textAlign={'center'}>
                     {this.state.foods.map(value =>
-                        <Card class={"child"}>
-                            <Image src={value.Url}/>
-                            <Card.Content>
+                        <Card class={"child"} >
+                            <Image onClick={()=>{
+                                console.log(value);
+                                this.props.history.push(`/detail/${value.Id}`)
+                            }} src={value.Url}/>
+                            <Card.Content onClick={()=>{
+                                console.log(value);
+                                this.props.history.push(`/detail/${value.Id}`)
+                            }}>
                                 <Card.Header>
                                     {value.Name}
                                 </Card.Header>
